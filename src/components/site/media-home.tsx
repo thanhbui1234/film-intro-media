@@ -1,19 +1,13 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "framer-motion";
 import {
   ArrowUpRight,
-  Bell,
   Bookmark,
-  Menu,
   Play,
   Search,
   Sparkles,
   TrendingUp,
 } from "lucide-react";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -24,6 +18,8 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
+import { MotionArticle, MotionDiv } from "@/components/site/motion-wrapper";
+import { Globe } from "../ui/globe";
 
 const featuredStories = [
   {
@@ -49,8 +45,6 @@ const featuredStories = [
   },
 ];
 
-const channels = ["News", "Culture", "Business", "Video", "Podcasts"];
-
 const metrics = [
   ["42K", "monthly readers"],
   ["18", "active channels"],
@@ -60,41 +54,7 @@ const metrics = [
 export function MediaHome() {
   return (
     <main className="min-h-screen bg-[#f7f8fa] text-slate-950">
-      <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3">
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <Menu className="size-5" />
-              <span className="sr-only">Open navigation</span>
-            </Button>
-            <div className="flex size-9 items-center justify-center rounded-md bg-slate-950 text-sm font-semibold text-white">
-              ND
-            </div>
-            <span className="text-lg font-semibold tracking-normal">
-              Namham DP
-            </span>
-          </div>
-          <nav className="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">
-            {channels.map((channel) => (
-              <a key={channel} href="#" className="hover:text-slate-950">
-                {channel}
-              </a>
-            ))}
-          </nav>
-          <div className="flex items-center gap-2">
-            <Button variant="ghost" size="icon">
-              <Search className="size-5" />
-              <span className="sr-only">Search</span>
-            </Button>
-            <Button variant="ghost" size="icon">
-              <Bell className="size-5" />
-              <span className="sr-only">Notifications</span>
-            </Button>
-            <Button className="hidden sm:inline-flex">Subscribe</Button>
-          </div>
-        </div>
-      </header>
-
+      {/* Hero */}
       <section className="relative overflow-hidden bg-slate-950 text-white">
         <Image
           src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80"
@@ -106,7 +66,7 @@ export function MediaHome() {
         />
         <div className="absolute inset-0 bg-slate-950/58" />
         <div className="relative mx-auto grid min-h-[620px] max-w-7xl items-end gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:px-8">
-          <motion.div
+          <MotionDiv
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
@@ -140,9 +100,9 @@ export function MediaHome() {
                 Watch brief
               </Button>
             </div>
-          </motion.div>
+          </MotionDiv>
 
-          <motion.div
+          <MotionDiv
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.7, ease: "easeOut" }}
@@ -157,10 +117,11 @@ export function MediaHome() {
                 <div className="mt-1 text-sm text-slate-200">{label}</div>
               </div>
             ))}
-          </motion.div>
+          </MotionDiv>
         </div>
       </section>
-
+      <Globe />
+      {/* Featured Stories */}
       <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
@@ -183,7 +144,7 @@ export function MediaHome() {
 
         <div className="mt-8 grid gap-5 md:grid-cols-3">
           {featuredStories.map((story, index) => (
-            <motion.article
+            <MotionArticle
               key={story.title}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -214,11 +175,12 @@ export function MediaHome() {
                   <CardDescription>{story.time}</CardDescription>
                 </CardHeader>
               </Card>
-            </motion.article>
+            </MotionArticle>
           ))}
         </div>
       </section>
 
+      {/* Features */}
       <section className="border-y border-slate-200 bg-white">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
           <div>
@@ -245,17 +207,6 @@ export function MediaHome() {
           </div>
         </div>
       </section>
-
-      <footer className="mx-auto flex max-w-7xl flex-col gap-5 px-4 py-10 text-sm text-slate-600 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
-        <div className="flex items-center gap-3">
-          <Avatar>
-            <AvatarImage src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=120&q=80" />
-            <AvatarFallback>ND</AvatarFallback>
-          </Avatar>
-          <span>Curated media platform base for Namham DP.</span>
-        </div>
-        <span>Next.js 16, React 19, shadcn/ui, framer-motion.</span>
-      </footer>
     </main>
   );
 }
