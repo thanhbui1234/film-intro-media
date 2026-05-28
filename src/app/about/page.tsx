@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "About | Namham DP",
     description:
       "Learn about Namham DP — our mission to empower creators and editorial teams.",
-    url: "https://namham-dp.com/about",
+    url: "https://film-intro-media.vercel.app/about",
   },
 };
 
@@ -48,7 +48,7 @@ export default function AboutPage() {
         type="AboutPage"
         name="About Namham DP"
         description="Learn about Namham DP — our mission to empower creators and editorial teams."
-        url="https://namham-dp.com/about"
+        url="https://film-intro-media.vercel.app/about"
       />
       <main className="min-h-screen bg-[#f7f8fa] text-slate-950">
         {/* Hero */}

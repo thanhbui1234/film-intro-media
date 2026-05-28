@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Contact | Namham DP",
     description:
       "Get in touch with the Namham DP team for partnerships, support, or media inquiries.",
-    url: "https://namham-dp.com/contact",
+    url: "https://film-intro-media.vercel.app/contact",
   },
 };
 
@@ -46,7 +46,7 @@ export default function ContactPage() {
         type="ContactPage"
         name="Contact Namham DP"
         description="Get in touch with the Namham DP team."
-        url="https://namham-dp.com/contact"
+        url="https://film-intro-media.vercel.app/contact"
       />
       <main className="min-h-screen bg-[#f7f8fa] text-slate-950">
         {/* Header */}

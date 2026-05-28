@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "Technical Stack | Namham DP",
     description:
       "Explore the technical architecture behind Namham DP — Next.js 16, React Server Components, and modern web performance.",
-    url: "https://namham-dp.com/technical-stuff",
+    url: "https://film-intro-media.vercel.app/technical-stuff",
   },
 };
 
@@ -95,7 +95,7 @@ export default function TechnicalStuffPage() {
         type="WebPage"
         name="Technical Stack — Namham DP"
         description="Explore the technical architecture behind Namham DP."
-        url="https://namham-dp.com/technical-stuff"
+        url="https://film-intro-media.vercel.app/technical-stuff"
       />
       <main className="min-h-screen bg-[#f7f8fa] text-slate-950">
         {/* Header */}

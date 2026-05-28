@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://namham-dp.com",
+    url: "https://film-intro-media.vercel.app",
     siteName: "Namham DP",
     title: "Namham DP | Modern Media Platform",
     description:
