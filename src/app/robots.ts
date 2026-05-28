@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://namham-dp.com/sitemap.xml",
+    sitemap: "https://film-intro-media.vercel.app/sitemap.xml",
   };
 }

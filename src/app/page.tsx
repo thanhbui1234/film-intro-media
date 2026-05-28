@@ -18,7 +18,7 @@ export default function Home() {
         type="WebPage"
         name="Namham DP — Home"
         description="Discover stories, video, and creator updates on Namham DP."
-        url="https://namham-dp.com"
+        url="https://film-intro-media.vercel.app"
       />
       <MediaHome />
     </>

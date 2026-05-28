@@ -1,4 +1,4 @@
-const BASE_URL = "https://namham-dp.com";
+const BASE_URL = "https://film-intro-media.vercel.app";
 
 interface JsonLdProps {
   type: "WebSite" | "Organization" | "WebPage" | "ContactPage" | "AboutPage";
