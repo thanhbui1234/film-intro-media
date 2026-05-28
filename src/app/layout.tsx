@@ -43,23 +43,12 @@ export const metadata: Metadata = {
     title: "Namham DP | Modern Media Platform",
     description:
       "A modern media platform for digital publishing, video, and creator content.",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1200&q=80",
-        width: 1200,
-        height: 630,
-        alt: "Namham DP — Modern Media Platform",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Namham DP | Modern Media Platform",
     description:
       "A modern media platform for digital publishing, video, and creator content.",
-    images: [
-      "https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1200&q=80",
-    ],
   },
   robots: {
     index: true,
