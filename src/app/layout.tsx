@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://namham-dp.com"),
+  metadataBase: new URL("https://film-intro-media.vercel.app"),
   title: {
     default: "Namham DP | Modern Media Platform",
     template: "%s | Namham DP",
